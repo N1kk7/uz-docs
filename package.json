@@ -1,0 +1,33 @@
+{
+  "name": "HR-B",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/image": "^2.0.0",
+    "@vercel/analytics": "^1.6.1",
+    "gsap": "^3.14.2",
+    "nuxt": "^4.2.2",
+    "nuxt-swiper": "^2.0.1",
+    "resend": "^6.9.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "sass": "^1.97.0",
+    "ts-node": "^10.9.2",
+    "vitest": "^4.0.16"
+  }
+}

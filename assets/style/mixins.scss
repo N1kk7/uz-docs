@@ -1,0 +1,89 @@
+/// @include aspect-ratio-modern(16, 9);
+@mixin aspect-ratio-modern($width, $height) {
+  aspect-ratio: #{$width} / #{$height};
+
+  @supports not (aspect-ratio: 1 / 1) {
+    position: relative;
+    padding-top: calc(#{$height} / #{$width} * 100%);
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/// @include text(16px, 24px, 400);
+@mixin text($size, $lineHeight, $weight: 400) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+}
+
+/// @include fluid-text(14px, 18px, 20px, 28px);
+@mixin fluid-text($minSize, $minLH, $maxSize, $maxLH) {
+  font-size: clamp($minSize, 2vw, $maxSize);
+  line-height: clamp($minLH, 3vw, $maxLH);
+}
+
+@mixin defaultButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 28px;
+  background: var(--btn-color);
+  transition: all ease 0.3s;
+  cursor: pointer;
+  gap: 4px;
+
+  &:active {
+    background-color: var(--btn-hover);
+    transition: all ease 0.3s;
+  }
+
+  span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    
+    &:hover {
+      background-color: var(--btn-hover);
+      transition: all ease 0.3s;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 11px 24px;
+    span {
+      font-size: 1rem;
+    }
+
+  }
+  @media screen and (max-width: 480px) {
+    padding: 8px 22px;
+    span {
+      font-size: 0.9375rem;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    padding: 8px 20px;
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  
+}
