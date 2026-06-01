@@ -176,6 +176,9 @@ import DOCUMENT from "@/public/document.png";
             cursor: pointer;
             gap: 15px;
 
+
+            
+
             img {
                 width: 40px;
                 height: 40px;
