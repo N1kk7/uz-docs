@@ -4,7 +4,6 @@
       <h1>Головна</h1>
       <img class="uz_logo_image" :src="LOGO" />
     </div>
-
     <div class="notification">
       <div class="notification_message">
         <p>
@@ -177,7 +176,7 @@ import DOCUMENT from "@/public/document.png";
             gap: 15px;
 
 
-            
+
 
             img {
                 width: 40px;
