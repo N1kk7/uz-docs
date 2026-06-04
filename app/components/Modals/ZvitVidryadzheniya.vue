@@ -27,6 +27,25 @@ import { useModalStore } from '../../../store/modal';
 
 const modalStore = useModalStore();
 
+//--REFS--//
+
+const bossName = ref("");
+const bossLastName = ref("");
+const employeePosition = ref("");
+const employeeName = ref("");
+const employeeLastName = ref("");
+const employeeId = ref(null);
+
+const documentDate = ref("");
+const documentId = ref(null);
+
+const businessTripStartDate = ref("");
+const businessTripEndDate = ref("");
+const businessTripCity = ref("");
+const businessTripCampaign = ref("");
+
+const generatedDocument = ref(null);
+
 </script>
 
 

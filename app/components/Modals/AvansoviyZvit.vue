@@ -27,6 +27,35 @@ import { useModalStore } from '../../../store/modal';
 
 const modalStore = useModalStore();
 
+
+
+//--REFS--//
+
+const employeeName = ref("");
+const employeeLastName = ref("");
+const employeeMiddleName = ref("");
+const employeeId = ref(null);
+const employeeIdentifyId = ref(null);
+
+const businessTripCost = ref(null);
+const businessTripSpent = ref(null);
+const totalSpent = ref(null);
+const remainingAmount = ref(null);
+const overspentAmount = ref(null);
+
+const totalSpentByWords = ref("");
+
+const businessTripDocumentDate = ref("");
+const businessTripTotalDays = ref("");
+const businessTripStartDate = ref("");
+const businessTripEndDate = ref("");
+const businessTripDocumentId = ref("");
+const businessTripAmount = ref("");
+
+
+const documentNumber = ref(null);
+const documentDate = ref("");
+
 </script>
 
 
