@@ -1,10 +1,13 @@
 <template>
-  <div class="home">
-    <div class="home_head">
-      <h1>Головна</h1>
+
+    <div class="page">
+
+        
+    <div class="page_head">
+      <h1>Документи</h1>
       <img class="uz_logo_image" :src="LOGO" />
     </div>
-    <div class="notification">
+    <!-- <div class="notification">
       <div class="notification_message">
         <p>
           Якщо ви вже працювали в системі або раніше створювали документи,
@@ -19,37 +22,64 @@
       </div>
 
       <button class="notification_button">Знайти працівника</button>
-    </div>
+    </div> -->
 
-    <div class="home_content">
+    <div class="breadcrumbs">
+            <NuxtLink to="/home">
+                Головна
+            </NuxtLink>
+        </div>
+
+    <div class="page_content">
+
+        
 
         <h3>
-            Доступні функції:
+            Формування документів:
         </h3>
 
         <ul class="features_wrapper">
-            <li>
-                <NuxtLink to="/documents">
-                    <img :src="DOCUMENT" alt="document" />
-                    <p>
-                        Створення та редагування документів
-                    </p>
+            <li @click="modalStore.showModal('AvansoviyZvit')">
+                <img :src="DOCUMENT" alt="document" />
+                <p>
+                    Авансовий звіт
+                </p>
 
-                </NuxtLink>
+            </li>
+            <li @click="modalStore.showModal('ZvitVidryadzheniya')">
+                <img :src="DOCUMENT" alt="document" />
+                <p>
+                    Звіт про відрядження
+                </p>
+
               
             </li>
         </ul>
     </div>
   </div>
+
+
+
 </template>
+
+
 
 <script setup>
 import LOGO from "@/public/logo-white1.png";
 import DOCUMENT from "@/public/document.png";
+
+import { useModalStore } from "../../store/modal";
+
+const modalStore = useModalStore();
+
+
 </script>
 
+
+
 <style lang="scss" scoped>
-.home {
+
+.page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -83,59 +113,22 @@ import DOCUMENT from "@/public/document.png";
     }
   }
 
-
-}
-
-.notification {
+  .breadcrumbs {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 0px 40px 0;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px;
-    position: relative;
-    background: black;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 20px;
-    color: var(--text-color);
-    width: 90vw;
-
-    &_message {
-        width: 100%;
-        height: auto;
-        background: var(--light-bg);
-        padding: 15px;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 10px;
-        font-size: 1rem;
-    }
-
-    &_button {
-        background: var(--accent-button);
-        color: var(--active-btn);
-        border: none;
-        padding: 10px 50px;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: 500;
-        transition: all ease 0.3s;
+    gap: 10px;
+  }
 
 
-        @media screen and (min-width: 1024px) {
-            &:hover {
-                background: var(--hover-btn);
-                transition: all ease 0.3s;
-            }
-        }
-    }
 }
 
-.home_content {
+.page_content {
     display: block;
     width: 97vw;
     height: -webkit-fill-available;
@@ -174,18 +167,10 @@ import DOCUMENT from "@/public/document.png";
             border-radius: 15px;
             transition: all ease 0.3s;
             cursor: pointer;
-
-
-            a {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 15px;
-
-
-            }
+             display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
 
 
 
@@ -205,4 +190,5 @@ import DOCUMENT from "@/public/document.png";
         }
     }
 }
+
 </style>

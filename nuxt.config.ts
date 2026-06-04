@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     '@': fileURLToPath(new URL('.', import.meta.url))
   },
 
-  modules: ['nuxt-swiper', '@nuxt/image'],
+  modules: ['nuxt-swiper', '@nuxt/image', '@pinia/nuxt'],
   plugins: ['@/plugins/gsap.client.ts'],
 
 })
