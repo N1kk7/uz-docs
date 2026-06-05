@@ -42,11 +42,16 @@ const modalComponents = {
   ZvitVidryadzheniya
 }
 
+
+
+
 </script>
 
 
 
 <style lang="scss">
+
+
 .modal-overlay {
   position: fixed;
   top: 0;
