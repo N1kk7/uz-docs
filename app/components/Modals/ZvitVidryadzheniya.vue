@@ -27,6 +27,11 @@ import { useModalStore } from '../../../store/modal';
 
 const modalStore = useModalStore();
 
+
+
+
+
+
 //--REFS--//
 
 const bossName = ref("");
