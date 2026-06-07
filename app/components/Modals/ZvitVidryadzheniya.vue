@@ -14,9 +14,6 @@
 
     </div>
 
-
-
-
 </template>
 
 
@@ -26,18 +23,6 @@
 import { useModalStore } from '../../../store/modal';
 
 const modalStore = useModalStore();
-
-
-
-
-
-
-
-
-
-
-
-
 
 //--REFS--//
 

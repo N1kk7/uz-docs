@@ -2,10 +2,6 @@
   <NuxtLayout>
     <NuxtPage />
     <!-- <Analytics /> -->
-
-
-
-     
   </NuxtLayout>
 </template>
 
