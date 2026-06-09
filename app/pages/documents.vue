@@ -8,9 +8,6 @@
       <img class="uz_logo_image" :src="LOGO" />
     </div>
 
-
-
-    
     <!-- <div class="notification">
       <div class="notification_message">
         <p>
