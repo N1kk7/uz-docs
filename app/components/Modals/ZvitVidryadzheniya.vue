@@ -67,6 +67,13 @@ const generatedDocument = ref(null);
     pointer-events: auto;
 
 
+
+
+
+
+
+    
+
     &_head {
         width: 100%;
         height: auto;
