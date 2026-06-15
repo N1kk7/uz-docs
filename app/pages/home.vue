@@ -24,7 +24,6 @@
     </div>
 
     <div class="home_content">
-
         <h3>
             Доступні функції:
         </h3>

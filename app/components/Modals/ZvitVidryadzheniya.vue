@@ -65,10 +65,6 @@ const generatedDocument = ref(null);
     background: var(--dark-bg);
     color: white;
     pointer-events: auto;
-
-
-    
-
     &_head {
         width: 100%;
         height: auto;

@@ -12,14 +12,6 @@
           :openModal="openModal"
           :closeModal="closeModal"
         />
-
-
-
-        
-
-
-
-        
       </template>
     </ModalsModal>
   </div>
