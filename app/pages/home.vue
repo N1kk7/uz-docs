@@ -37,7 +37,6 @@
                     </p>
 
                 </NuxtLink>
-              
             </li>
         </ul>
     </div>

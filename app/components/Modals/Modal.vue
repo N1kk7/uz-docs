@@ -42,15 +42,6 @@ const modalComponents = {
   ZvitVidryadzheniya
 }
 
-
-
-
-
-
-
-
-
-
 </script>
 
 
