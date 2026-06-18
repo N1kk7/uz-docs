@@ -8,8 +8,6 @@
             </button>
         </div>
 
-        
-
         <div class="main_modal_content">
             ZVIT PRO VIDRYADZHENYA
         </div>
