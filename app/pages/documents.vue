@@ -36,6 +36,10 @@
             Формування документів:
         </h3>
 
+
+
+        
+
         <ul class="features_wrapper">
             <li @click="modalStore.showModal('AvansoviyZvit')">
                 <img :src="DOCUMENT" alt="document" />

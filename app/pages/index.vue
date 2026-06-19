@@ -7,6 +7,11 @@
         <img class="uz_logo_image" :src="LOGO" />
         <!-- <img class="uz_logo_image" src="/temp/temp.jpg"/> -->
       </div>
+
+
+
+
+      
     </div>
     <div class="content_element">
       <div class="content_element_wrapper">
@@ -20,10 +25,6 @@
             інструментів, необхідних для ефективної роботи.
           </p>
         </div>
-
-
-        
-
         <div class="access_message">Для початку роботи увійдіть в систему.</div>
       </div>
 
