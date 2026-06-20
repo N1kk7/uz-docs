@@ -1,8 +1,6 @@
 <template>
 
     <div class="page">
-
-        
     <div class="page_head">
       <h1>Документи</h1>
       <img class="uz_logo_image" :src="LOGO" />
@@ -35,10 +33,6 @@
         <h3>
             Формування документів:
         </h3>
-
-
-
-        
 
         <ul class="features_wrapper">
             <li @click="modalStore.showModal('AvansoviyZvit')">
