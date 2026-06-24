@@ -31,12 +31,7 @@
       >
         Вхід
       </button>
-
-
-      
-
       </div>
-  
     </div>
   </section>
 </template>
