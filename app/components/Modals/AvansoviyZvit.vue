@@ -69,6 +69,11 @@ const documentDate = ref("");
     pointer-events: auto;
 
 
+
+
+    
+
+
     &_head {
         width: 100%;
         height: auto;
