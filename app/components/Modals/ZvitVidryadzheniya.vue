@@ -15,12 +15,6 @@
     </div>
 </template>
 
-
-
-
-
-
-
 <script setup>
 
 import { useModalStore } from '../../../store/modal';

@@ -35,24 +35,6 @@ const openModal = (modalName, props = {}) => {
   modalStore.showModal(modalName, props);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const modalComponents = {
     //components
 //   DeleteSubscriptionPlan,
