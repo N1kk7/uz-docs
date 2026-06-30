@@ -4,11 +4,6 @@
       <slot />
     </main>
 
-
-
-
-
-    
     <ModalsModal>
       <template #default="{ openModal, closeModal }">
         <component

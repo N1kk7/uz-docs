@@ -164,12 +164,6 @@ import DOCUMENT from "@/public/document.png";
         border: 1px solid rgba(255, 255, 255, 0.25);
         gap: 15px;
 
-
-
-
-
-        
-
         li {
             font-size: 1.2rem;
             font-weight: 500;

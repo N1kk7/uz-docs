@@ -3,11 +3,6 @@
     <NuxtPage />
     <!-- <Analytics /> -->
   </NuxtLayout>
-
-
-
-
-  
 </template>
 
 
