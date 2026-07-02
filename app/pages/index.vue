@@ -12,10 +12,6 @@
     <div class="content_element">
       <div class="content_element_wrapper">
 
-
-
-        
-
             <div class="text_block">
         <div class="welcome_message">
           <h2>Вітаємо в застосунку!</h2>
