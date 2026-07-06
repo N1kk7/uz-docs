@@ -12,11 +12,6 @@
             ZVIT PRO VIDRYADZHENYA
         </div>
 
-
-
-
-        
-
     </div>
 </template>
 
