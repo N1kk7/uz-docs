@@ -10,6 +10,13 @@ export const useModalStore = defineStore('modal', {
         modalProps: {},
 
     }),
+
+
+
+
+
+
+    
     
     actions: {
         showModal(modalName: string, props?: {}, scroll?: boolean) {
