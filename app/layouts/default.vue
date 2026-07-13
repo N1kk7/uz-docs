@@ -21,13 +21,6 @@
 
 <script setup>
 
-
-
-
-
-
-
-
 import { useModalStore } from "@/store/modal";
 // import AppFooter from "~/components/AppFooter.vue";
 // import AppHeader from "~/components/AppHeader.vue";
