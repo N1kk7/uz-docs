@@ -7,15 +7,6 @@
         <img class="uz_logo_image" :src="LOGO" />
         <!-- <img class="uz_logo_image" src="/temp/temp.jpg"/> -->
       </div>
-
-
-
-
-
-
-
-
-      
       
     </div>
     <div class="content_element">

@@ -25,6 +25,11 @@ export const useModalStore = defineStore('modal', {
             }
             // document.body.style.overflow = "hidden";
             
+
+
+
+
+            
         },
         closeModal() {
             this.isVisible = false;
