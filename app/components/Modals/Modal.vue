@@ -44,8 +44,6 @@ const modalComponents = {
 
 </script>
 
-
-
 <style lang="scss">
 
 
