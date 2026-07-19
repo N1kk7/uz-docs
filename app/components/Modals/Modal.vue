@@ -74,7 +74,4 @@ const modalComponents = {
   }
 }
 
-
-
-
 </style>
