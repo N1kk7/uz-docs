@@ -33,6 +33,9 @@ export const useModalStore = defineStore('modal', {
 
 
             
+
+
+            
         },
         closeModal() {
             this.isVisible = false;
