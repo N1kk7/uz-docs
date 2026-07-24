@@ -47,10 +47,6 @@ const businessTripDocumentId = ref("");
 const businessTripAmount = ref("");
 
 
-
-
-
-
 const documentNumber = ref(null);
 const documentDate = ref("");
 
