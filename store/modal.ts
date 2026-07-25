@@ -11,6 +11,10 @@ export const useModalStore = defineStore('modal', {
 
     }),
 
+
+
+    
+
     actions: {
         showModal(modalName: string, props?: {}, scroll?: boolean) {
             this.isVisible = true;
