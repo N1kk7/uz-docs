@@ -21,8 +21,6 @@ import { useModalStore } from '@/store/modal';
 import AvansoviyZvit from "../../components/Modals/AvansoviyZvit.vue";
 import ZvitVidryadzheniya from "../../components/Modals/ZvitVidryadzheniya.vue";
 
-
-
 const modalStore = useModalStore();
 const isVisible = computed(() => modalStore.isVisible);
 const currentModal = computed(() => modalStore.currentModal);
