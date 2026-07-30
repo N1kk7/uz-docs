@@ -9,11 +9,6 @@
       </div>
 
 
-
-
-
-
-
     </div>
     <div class="content_element">
       <div class="content_element_wrapper">
@@ -45,12 +40,6 @@
 <script setup>
 import App from "~/app.vue";
 import LOGO from '@/public/logo-white1.png';
-
-
-
-
-
-
 
 
 async function verifyAccessCode(code) {
