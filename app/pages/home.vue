@@ -163,11 +163,6 @@ import DOCUMENT from "@/public/document.png";
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.25);
         gap: 15px;
-
-
-
-
-
         
         li {
             font-size: 1.2rem;

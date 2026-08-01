@@ -19,11 +19,6 @@
 
 <script setup>
 
-
-
-
-
-
 import { computed } from 'vue'
 import { useModalStore } from '@/store/modal';
 
