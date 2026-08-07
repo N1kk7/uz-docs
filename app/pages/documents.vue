@@ -29,6 +29,12 @@
 
 
     
+
+
+
+
+
+    
     <div class="breadcrumbs">
             <NuxtLink to="/home">
                 Головна
