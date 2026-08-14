@@ -166,13 +166,6 @@ import DOCUMENT from "@/public/document.png";
 
 
 
-
-
-
-
-
-
-        
         
         li {
             font-size: 1.2rem;
