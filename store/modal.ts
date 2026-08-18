@@ -11,10 +11,6 @@ export const useModalStore = defineStore('modal', {
 
     }),
 
-
-
-
-
     
 
     

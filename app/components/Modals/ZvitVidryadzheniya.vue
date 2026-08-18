@@ -7,16 +7,6 @@
                 X
             </button>
         </div>
-
-
-
-
-        
-
-
-
-
-        
         <div class="main_modal_content">
             ZVIT PRO VIDRYADZHENYA
         </div>
@@ -24,12 +14,6 @@
 </template>
 
 <script setup>
-
-
-
-
-
-
 
 import { useModalStore } from '../../../store/modal';
 
