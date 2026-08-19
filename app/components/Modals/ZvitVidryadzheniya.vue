@@ -6,6 +6,11 @@
             <button @click="modalStore.closeModal()">
                 X
             </button>
+
+
+
+
+            
         </div>
         <div class="main_modal_content">
             ZVIT PRO VIDRYADZHENYA
