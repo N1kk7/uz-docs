@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum RouteType {
+  SINGLE
+  DOUBLE
+}
+
+model User {
+  id          String       @id @default(uuid()) @db.Uuid // совпадает с supabase auth.users.id
+  email       String       @unique
+  fullName    String?
+  createdAt   DateTime     @default(now())
+  routeSheets RouteSheet[]
+}
+
+model RouteSheet {
+  id     String    @id @default(uuid())
+  userId String    @db.Uuid
+  user   User      @relation(fields: [userId], references: [id])
+  type   RouteType
+
+  dateStart DateTime @db.Date // дата першого маршруту
+  dateEnd   DateTime? @db.Date // дата другого маршруту (для DOUBLE), якщо відрізняється
+
+  legs RouteLeg[]
+  rest RouteRest?
+
+  totalWorkMinutes  Int?
+  totalNightMinutes Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, dateStart])
+}
+
+model RouteLeg {
+  id           String     @id @default(uuid())
+  routeSheetId String
+  routeSheet   RouteSheet @relation(fields: [routeSheetId], references: [id])
+  legNumber    Int // 1 або 2
+
+  yavka              DateTime // повна дата+час явки
+  priyomkaMinutes    Int
+  kpVyhidMinutes     Int?
+  kpZahid            DateTime
+  sdachaMinutes      Int
+  medComissiaMinutes Int?
+  kinetsMinutes      Int
+  nagonMinutes       Int?
+
+  workEnd      DateTime // розрахований кінець роботи
+  workMinutes  Int      // розрахована тривалість
+  nightMinutes Int      // нічні години в хвилинах
+
+  createdAt DateTime @default(now())
+
+  @@unique([routeSheetId, legNumber])
+}
+
+model RouteRest {
+  id           String     @id @default(uuid())
+  routeSheetId String     @unique
+  routeSheet   RouteSheet @relation(fields: [routeSheetId], references: [id])
+
+  restMinutes     Int // відпочинок
+  overRestMinutes Int // переотдих
+}
+
+model AdvanceReport {
+  id          String   @id @default(cuid())
+  userId      String?
+  lastName    String
+  firstName   String
+  middleName  String?
+  tabNumber   String
+  inn         String
+  received    Json     // ReceivedItem[]
+  expenses    Json     // ExpenseItem[]
+  totalReceived Decimal @db.Decimal(12, 2)
+  totalSpent    Decimal @db.Decimal(12, 2)
+  balance       Decimal? @db.Decimal(12, 2)
+  overspent     Decimal? @db.Decimal(12, 2)
+  amountInWords String
+  createdAt   DateTime @default(now())
+}

@@ -42,18 +42,26 @@
         </h3>
 
         <ul class="features_wrapper">
-            <li @click="modalStore.showModal('AvansoviyZvit')">
+            <li>
+              <NuxtLink to="/documents/avansoviy-zvit">
                 <img :src="DOCUMENT" alt="document" />
                 <p>
                     Авансовий звіт
                 </p>
 
+              </NuxtLink>
+               
+
             </li>
-            <li @click="modalStore.showModal('ZvitVidryadzheniya')">
-                <img :src="DOCUMENT" alt="document" />
-                <p>
-                    Звіт про відрядження
-                </p>
+            <li>
+                <NuxtLink to="/">
+                  <img :src="DOCUMENT" alt="document" />
+                  <p>
+                      Звіт про відрядження
+                  </p>
+
+                </NuxtLink>
+               
 
               
             </li>
@@ -72,9 +80,9 @@
 import LOGO from "@/public/logo-white1.png";
 import DOCUMENT from "@/public/document.png";
 
-import { useModalStore } from "../../store/modal";
+// import { useModalStore } from "../../store/modal";
 
-const modalStore = useModalStore();
+// const modalStore = useModalStore();
 
 
 </script>
@@ -161,6 +169,14 @@ const modalStore = useModalStore();
         gap: 15px;
 
         li {
+          width: 100%;
+          height: auto;
+          position: relative;
+          background: transparent;
+            
+
+
+          a {
             font-size: 1.2rem;
             font-weight: 500;
             color: var(--text-color);
@@ -176,8 +192,13 @@ const modalStore = useModalStore();
             align-items: center;
             gap: 15px;
 
-
-
+            @media screen and (min-width: 1024px) {
+                &:hover {
+                    background: var(--light-bg-hover);
+                    transition: all ease 0.3s;
+                }
+            }
+          }
 
             img {
                 width: 40px;
@@ -185,12 +206,7 @@ const modalStore = useModalStore();
                 object-fit: contain;
             }
 
-            @media screen and (min-width: 1024px) {
-                &:hover {
-                    background: var(--light-bg-hover);
-                    transition: all ease 0.3s;
-                }
-            }
+            
         }
     }
 }

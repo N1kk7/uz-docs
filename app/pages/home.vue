@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="home">
     <div class="home_head">
       <h1>Головна</h1>
@@ -35,6 +35,15 @@
                     <img :src="DOCUMENT" alt="document" />
                     <p>
                         Створення та редагування документів
+                    </p>
+
+                </NuxtLink>
+            </li>
+             <li>
+                <NuxtLink to="/race-documents">
+                    <img :src="DOCUMENT" alt="document" />
+                    <p>
+                        Робота з маршрутними листами
                     </p>
 
                 </NuxtLink>
@@ -164,12 +173,6 @@ import DOCUMENT from "@/public/document.png";
         border: 1px solid rgba(255, 255, 255, 0.25);
         gap: 15px;
 
-
-
-
-
-        
-        
         li {
             font-size: 1.2rem;
             font-weight: 500;
@@ -211,5 +214,81 @@ import DOCUMENT from "@/public/document.png";
             }
         }
     }
+}
+</style> -->
+
+
+<template>
+  <div class="home">
+    <AppHeader :logo="LOGO" />
+
+    <EmployeeNotification @find="onFindEmployee" />
+
+    <div class="home_content">
+      <h3>Доступні функції:</h3>
+
+      <ul class="features_wrapper">
+        <FeatureCard
+          v-for="item in features"
+          :key="item.to"
+          :to="item.to"
+          :icon="item.icon"
+          :label="item.label"
+        />
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import AppHeader from '../components/AppHeader.vue';
+import EmployeeNotification from '../components/EmployeeNotification.vue';
+import FeatureCard from '../components/FeatureCard.vue';
+import LOGO from '@/public/logo-white1.png';
+import DOCUMENT from '@/public/document.png';
+
+const features = [
+  { to: '/documents', icon: DOCUMENT, label: 'Створення та редагування документів' },
+  { to: '/race-documents', icon: DOCUMENT, label: 'Робота з маршрутними листами' },
+];
+
+function onFindEmployee() {
+  // навигация/логика поиска працівника
+}
+</script>
+
+<style lang="scss" scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 30px;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.home_content {
+  width: 97vw;
+  height: 100%;
+
+  h3 {
+    @include text(1.5rem, 1.3, 700);
+    color: var(--text-color);
+    margin: 0 20px 20px;
+  }
+
+  .features_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--dark-bg);
+    border: 1px solid var(--divider-color, rgba(255, 255, 255, 0.1));
+    border-radius: 20px;
+    padding: 20px;
+    height: 90%;
+    overflow-y: auto;
+  }
 }
 </style>
