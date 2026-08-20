@@ -1,22 +1,22 @@
 <template>
   <div class="received">
     <div class="head">
-      <h3>Одержано</h3>
-      <button type="button" class="btn-add" :disabled="items.length >= 3" @click="onAdd">
-        + додати
+      <h3>Одержано авансу</h3>
+      <button type="button" class="btn-ghost" :disabled="items.length >= 3" @click="onAdd">
+        + додати рядок
       </button>
     </div>
 
     <div v-for="(item, i) in items" :key="item.id" class="row">
-      <span class="idx">{{ i + 1 }}.</span>
+      <span class="badge">{{ i + 1 }}</span>
       <input v-model="item.source" type="text" placeholder="від кого, № та дата" />
-      <input v-model.number="item.amount" type="number" step="0.01" min="0" placeholder="0.00" />
-      <button type="button" class="btn-remove" @click="onRemove(item.id)">✕</button>
+      <input v-model.number="item.amount" type="number" step="0.01" min="0" class="mono amount" placeholder="0.00" />
+      <button type="button" class="btn-icon" title="Видалити" @click="onRemove(item.id)">✕</button>
     </div>
 
     <div class="total">
       <span>Усього отримано</span>
-      <strong>{{ total.toFixed(2) }}</strong>
+      <strong class="mono">{{ total.toFixed(2) }} ₴</strong>
     </div>
   </div>
 </template>
@@ -34,83 +34,112 @@ defineProps({
 .received {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .head {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  h3 {
-    @include text(1.1rem, 1.3, 700);
-    color: var(--text-color);
-    margin: 0;
-  }
+h3 {
+  @include textDisplay(1.05rem, 1.3, 600);
+  color: var(--text-color);
+  margin: 0;
 }
 
 .row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.idx {
-  width: 20px;
-  color: var(--text-grey);
+.badge {
+  @include textMono(0.8rem, 1, 600);
+  width: 24px;
+  height: 24px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--secondary-btn);
+  color: var(--text-color);
 }
 
 input {
-  @include text(0.9rem, 1.4, 400);
-  padding: 8px 10px;
-  background: var(--light-bg);
-  border: 1px solid var(--divider-color, rgba(255, 255, 255, 0.1));
+  @include text(0.9rem, 1.3, 400);
+  padding: 9px 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-subtle);
   color: var(--text-color);
-  border-radius: 10px;
+  border-radius: 8px;
   flex: 1;
-  transition: border-color ease 0.3s;
+  transition: border-color ease 0.2s;
 
+  &::placeholder { color: var(--text-grey); opacity: 0.6; }
+  &:hover { border-color: var(--border-subtle-hover); }
   &:focus {
     outline: none;
     border-color: var(--accent-button);
+    box-shadow: 0 0 0 3px rgba(145, 163, 229, 0.2);
   }
 
-  &[type='number'] {
-    max-width: 140px;
+  &.amount {
     flex: none;
+    width: 130px;
+    text-align: right;
   }
 }
 
-.btn-add,
-.btn-remove {
+.mono { @include textMono(0.9rem, 1.3, 500); }
+
+.btn-ghost {
+  @include text(0.85rem, 1.2, 500);
   cursor: pointer;
-  background: var(--secondary-btn);
-  color: var(--text-color);
-  border: none;
-  border-radius: 10px;
-  padding: 8px 14px;
-  transition: background ease 0.3s;
+  background: transparent;
+  color: var(--accent-button);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 7px 12px;
+  transition: all ease 0.2s;
+
+  &:hover:not(:disabled) {
+    border-color: var(--accent-button);
+    background: rgba(145, 163, 229, 0.08);
+  }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.btn-icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-grey);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  transition: all ease 0.2s;
 
   &:hover {
-    background: var(--light-bg-hover);
+    color: var(--error);
+    border-color: var(--error);
   }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-}
-
-.btn-remove {
-  padding: 8px 12px;
 }
 
 .total {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--divider-color, rgba(255, 255, 255, 0.1));
-  padding-top: 10px;
+  align-items: baseline;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
   color: var(--text-color);
+
+  strong { @include textMono(1.05rem, 1.2, 600); }
 }
 </style>

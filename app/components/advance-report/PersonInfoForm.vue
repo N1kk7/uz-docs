@@ -1,37 +1,45 @@
 <template>
   <div class="person-form">
     <div class="row">
-      <label>
-        <span>Прізвище</span>
-        <input v-model="modelValue.lastName" type="text" />
-        <span v-if="errors.lastName" class="error">{{ errors.lastName }}</span>
+      <label class="field">
+        <span class="field_label">Прізвище</span>
+        <input v-model="modelValue.lastName" type="text" placeholder="Діденко" />
+        <span v-if="errors.lastName" class="field_error">{{ errors.lastName }}</span>
       </label>
-      <label>
-        <span>Ім'я</span>
-        <input v-model="modelValue.firstName" type="text" />
-        <span v-if="errors.firstName" class="error">{{ errors.firstName }}</span>
+      <label class="field">
+        <span class="field_label">Ім'я</span>
+        <input v-model="modelValue.firstName" type="text" placeholder="Дмитро" />
+        <span v-if="errors.firstName" class="field_error">{{ errors.firstName }}</span>
       </label>
-      <label>
-        <span>По батькові</span>
-        <input v-model="modelValue.middleName" type="text" />
+      <label class="field">
+        <span class="field_label">По батькові</span>
+        <input v-model="modelValue.middleName" type="text" placeholder="Олександрович" />
       </label>
     </div>
+
     <div class="row">
-      <label>
-        <span>Табельний номер</span>
-        <input v-model="modelValue.tabNumber" type="text" />
-        <span v-if="errors.tabNumber" class="error">{{ errors.tabNumber }}</span>
+      <label class="field field--narrow">
+        <span class="field_label">Табельний номер</span>
+        <input v-model="modelValue.tabNumber" type="text" class="mono" placeholder="16760" />
+        <span v-if="errors.tabNumber" class="field_error">{{ errors.tabNumber }}</span>
       </label>
-      <label>
-        <span>ІПН</span>
-        <input v-model="modelValue.inn" type="text" inputmode="numeric" maxlength="10" />
-        <span v-if="errors.inn" class="error">{{ errors.inn }}</span>
-      </label>
+
+      <div class="field field--grow">
+        <span class="field_label">Реєстраційний номер облікової картки (ІПН)</span>
+        <DigitBoxInput
+          v-model="modelValue.inn"
+          :length="10"
+          :has-error="!!errors.inn"
+        />
+        <span v-if="errors.inn" class="field_error">{{ errors.inn }}</span>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import DigitBoxInput from './DigitBoxInput.vue'
+
 defineProps({
   modelValue: { type: Object, required: true },
   errors: { type: Object, default: () => ({}) },
@@ -42,7 +50,7 @@ defineProps({
 .person-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .row {
@@ -51,35 +59,59 @@ defineProps({
   flex-wrap: wrap;
 }
 
-label {
+.field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   flex: 1 1 200px;
 
-  span:first-child {
-    @include text(0.85rem, 1.3, 400);
+  &--narrow {
+    flex: 0 1 180px;
+  }
+
+  &--grow {
+    flex: 1 1 320px;
+  }
+
+  &_label {
+    @include text(0.75rem, 1.2, 500);
     color: var(--text-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &_error {
+    @include text(0.75rem, 1.2, 400);
+    color: var(--error);
   }
 }
 
 input {
-  @include text(0.95rem, 1.4, 400);
-  padding: 10px 12px;
-  background: var(--light-bg);
-  border: 1px solid var(--divider-color, rgba(255, 255, 255, 0.1));
+  @include text(0.95rem, 1.3, 400);
+  padding: 11px 14px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-subtle);
   color: var(--text-color);
   border-radius: 10px;
-  transition: border-color ease 0.3s;
+  transition: border-color ease 0.2s, box-shadow ease 0.2s;
+
+  &::placeholder {
+    color: var(--text-grey);
+    opacity: 0.6;
+  }
+
+  &:hover {
+    border-color: var(--border-subtle-hover);
+  }
 
   &:focus {
     outline: none;
     border-color: var(--accent-button);
+    box-shadow: 0 0 0 3px rgba(145, 163, 229, 0.2);
   }
-}
 
-.error {
-  @include text(0.75rem, 1.3, 400);
-  color: #ff8a80;
+  &.mono {
+    @include textMono(0.95rem, 1.3, 500);
+  }
 }
 </style>
