@@ -50,7 +50,7 @@
           </li>
 
           <li>
-            <NuxtLink to="/" class="tile">
+            <NuxtLink to="/documents/trip-report/create" class="tile">
               <span class="tile_icon">
                 <img :src="DOCUMENT" alt="" />
               </span>
