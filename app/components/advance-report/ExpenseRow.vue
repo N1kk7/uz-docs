@@ -27,6 +27,11 @@ defineProps({
   index: { type: Number, required: true },
   errors: { type: Object, default: () => ({}) },
   onRemove: { type: Function, required: true },
+
+
+
+
+  
 })
 </script>
 

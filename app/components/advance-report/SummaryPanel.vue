@@ -14,7 +14,11 @@
       <span>Залишок</span>
 
 
+
       
+
+
+
       <b class="mono success">{{ balance.toFixed(2) }} ₴</b>
     </div>
     <div class="line" v-if="overspent !== null">

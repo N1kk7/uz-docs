@@ -7,6 +7,9 @@
       <p>{{ label }}</p>
     </NuxtLink>
   </li>
+
+
+  
 </template>
 
 <script setup>
