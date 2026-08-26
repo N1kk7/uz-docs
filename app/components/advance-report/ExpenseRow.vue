@@ -28,10 +28,6 @@ defineProps({
   errors: { type: Object, default: () => ({}) },
   onRemove: { type: Function, required: true },
 
-
-
-
-  
 })
 </script>
 

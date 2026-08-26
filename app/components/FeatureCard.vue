@@ -8,8 +8,6 @@
     </NuxtLink>
   </li>
 
-
-  
 </template>
 
 <script setup>
