@@ -21,6 +21,10 @@ defineProps({
   background: var(--main-accent);
   width: 100%;
 
+
+
+  
+
   h1 {
     @include text(1.8rem, 1.3, 600);
     color: var(--active-btn);
