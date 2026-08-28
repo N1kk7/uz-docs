@@ -21,6 +21,9 @@ function threeDigits(num: number, fem = false): string {
 
 
 
+
+
+
 function plural(num: number, forms: [string, string, string]): string {
   const n = Math.abs(num) % 100, n1 = n % 10
   if (n > 10 && n < 20) return forms[2]

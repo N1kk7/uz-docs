@@ -12,6 +12,9 @@
   </div>
 </template>
 
+
+
+
 <script setup>
 import RaceTabsNav from '../components/RaceTabsNav.vue';
 
