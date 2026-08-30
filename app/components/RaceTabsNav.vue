@@ -8,10 +8,6 @@
       active-class="tabs_item--active"
     >
       {{ tab.label }}
-
-
-
-      
     </NuxtLink>
   </nav>
 </template>
