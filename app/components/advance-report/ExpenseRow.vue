@@ -20,6 +20,10 @@
     <button type="button" class="btn-icon" title="Видалити" @click="onRemove(item.id)">✕</button>
   </div>
 
+
+
+  
+
 </template>
 
 <script setup>
