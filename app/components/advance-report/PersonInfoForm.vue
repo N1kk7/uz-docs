@@ -35,14 +35,6 @@
       </div>
     </div>
 
-
-
-
-    
-
-
-
-    
   </div>
 </template>
 
