@@ -61,11 +61,6 @@
       </p>
     </div>
 
-
-
-
-
-    
     
     <div class="actions">
       <button class="actions_clear" @click="clearAll">Очистити</button>

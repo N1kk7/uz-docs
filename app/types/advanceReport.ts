@@ -13,9 +13,6 @@ export interface ReceivedItem {
   amount: number
 }
 
-
-
-
 export interface ExpenseItem {
   id: string
   date: string        // yyyy-mm-dd

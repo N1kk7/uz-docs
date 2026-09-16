@@ -16,8 +16,6 @@ function threeDigits(num: number, fem = false): string {
     if (tt) parts.push(tens[tt] || '')
     if (o) parts.push((fem ? onesFem : ones)[o] || '')
 
-
-      
   }
   return parts.join(' ')
 }
