@@ -10,6 +10,11 @@ const hundreds = ['', 'сто', 'двісті', 'триста', 'чотирис�
 
 
 
+
+
+
+
+
 function threeDigits(num: number, fem = false): string {
   const h = Math.floor(num / 100), t = num % 100
   const parts: string[] = []
