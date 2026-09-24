@@ -2,6 +2,10 @@
   <div class="rest-calculator-page">
     <RestCalculator cache-key="standalone-rest-calculator" />
   </div>
+
+
+
+  
 </template>
 
 <script setup>
