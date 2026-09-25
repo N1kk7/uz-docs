@@ -6,6 +6,10 @@
 
 
     
+
+
+
+    
     <div class="rest-block" v-if="restData">
       <h3>Відпочинок між маршрутами</h3>
 
