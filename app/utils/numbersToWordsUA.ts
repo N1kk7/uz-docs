@@ -6,10 +6,6 @@ const tens = ['', '', 'двадцять', 'тридцять', 'сорок', "п'
 const hundreds = ['', 'сто', 'двісті', 'триста', 'чотириста', "п'ятсот", 'шістсот', 'сімсот', 'вісімсот', "дев'ятсот"]
 
 
-
-
-
-
 function threeDigits(num: number, fem = false): string {
   const h = Math.floor(num / 100), t = num % 100
   const parts: string[] = []
