@@ -2,6 +2,10 @@
   <div class="double-route">
     <RouteLegForm ref="leg1Ref" cache-key="double-route-leg1" title="Маршрут 1" />
 
+
+
+
+    
     <div class="rest-block" v-if="restData">
       <h3>Відпочинок між маршрутами</h3>
 

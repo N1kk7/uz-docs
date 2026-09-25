@@ -5,6 +5,9 @@ export interface AdvanceReportPerson {
   middleName: string
   tabNumber: string
   inn: string
+
+
+  
 }
 
 export interface ReceivedItem {
