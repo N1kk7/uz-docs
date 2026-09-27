@@ -6,6 +6,10 @@ export interface AdvanceReportPerson {
   tabNumber: string
   inn: string
 
+
+
+
+  
   
 }
 

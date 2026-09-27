@@ -32,7 +32,12 @@
           :has-error="!!errors.inn"
         />
         <span v-if="errors.inn" class="field_error">{{ errors.inn }}</span>
-      </div> 
+      </div>
+      
+      
+
+
+      
     </div>
 
   </div>
