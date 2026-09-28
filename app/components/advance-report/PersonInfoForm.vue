@@ -34,6 +34,11 @@
         <span v-if="errors.inn" class="field_error">{{ errors.inn }}</span>
       </div>
 
+
+
+
+
+      
     </div>
 
   </div>
