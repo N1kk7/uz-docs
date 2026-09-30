@@ -15,10 +15,6 @@
       <span></span>
     </div>
 
-
-
-
-    
     <div class="rows">
       <ExpenseRow
         v-for="(item, i) in items"
