@@ -10,6 +10,8 @@
       <span class="field_label">Підрозділ</span>
       <input v-model="modelValue.department" type="text" placeholder="Електровозне депо Харків - Головне" />
       <span v-if="errors.recipientDepartment" class="field_error">{{ errors.recipientDepartment }}</span>
+
+      
     </label>
 
     <label class="field field--wide">

@@ -11,12 +11,18 @@
         <input v-model="modelValue.orderNumber" type="text" class="mono" placeholder="350/ВД" />
         <span v-if="errors.orderNumber" class="field_error">{{ errors.orderNumber }}</span>
       </label>
+
+
+
     </div>
 
     <label class="field field--wide">
       <span class="field_label">Місто відрядження</span>
       <input v-model="modelValue.city" type="text" placeholder="Львів" />
       <span v-if="errors.city" class="field_error">{{ errors.city }}</span>
+
+
+      
     </label>
 
     <label class="field field--wide">
