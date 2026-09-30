@@ -13,6 +13,9 @@
       </label>
 
 
+  <!-- <div class="test_block">
+    TEST
+  </div> -->
 
     </div>
 
@@ -22,7 +25,7 @@
       <span v-if="errors.city" class="field_error">{{ errors.city }}</span>
 
 
-      
+
     </label>
 
     <label class="field field--wide">

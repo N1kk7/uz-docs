@@ -29,6 +29,12 @@
       <span v-if="errors.applicantTabNumber" class="field_error">{{ errors.applicantTabNumber }}</span>
     </label>
   </div>
+
+
+
+  <!-- <div class="test_block">
+    TEST
+  </div> -->
 </template>
 
 <script setup>

@@ -4,6 +4,11 @@
     <label class="field field--wide">
       <span class="field_label">Посада адресата</span>
       <input v-model="modelValue.position" type="text" placeholder="Начальнику виробничого підрозділу" />
+
+
+
+
+      
     </label>
 
     <label class="field field--wide">
@@ -11,7 +16,7 @@
       <input v-model="modelValue.department" type="text" placeholder="Електровозне депо Харків - Головне" />
       <span v-if="errors.recipientDepartment" class="field_error">{{ errors.recipientDepartment }}</span>
 
-      
+
     </label>
 
     <label class="field field--wide">
