@@ -12,10 +12,10 @@
         <span v-if="errors.orderNumber" class="field_error">{{ errors.orderNumber }}</span>
       </label>
 
-
+<!-- 
   <div class="test_block">
     TEST
-  </div>
+  </div> -->
 
     </div>
 
