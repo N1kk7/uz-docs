@@ -13,9 +13,9 @@
       </label>
 
 
-  <!-- <div class="test_block">
+  <div class="test_block">
     TEST
-  </div> -->
+  </div>
 
     </div>
 
