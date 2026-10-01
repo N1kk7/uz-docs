@@ -5,14 +5,6 @@
       <span class="field_label">Посада адресата</span>
       <input v-model="modelValue.position" type="text" placeholder="Начальнику виробничого підрозділу" />
 
-
-
-
-      
-
-
-
-      
     </label>
 
     <label class="field field--wide">
