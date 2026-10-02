@@ -3,4 +3,8 @@ export function formatDateUa(isoDate: any) {
   const [y, m, d] = isoDate.split('-')
   if (!y || !m || !d) return ''
   return `${d}.${m}.${y}`
+
+
+
+  
 }

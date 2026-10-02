@@ -90,6 +90,10 @@ function onPaste(index, event) {
     transition: border-color ease 0.2s, box-shadow ease 0.2s;
     padding: 0;
 
+
+
+    
+
     &:focus {
       outline: none;
       border-color: var(--brass);
