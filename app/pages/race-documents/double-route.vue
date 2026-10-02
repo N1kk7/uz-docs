@@ -7,10 +7,6 @@
 
 
 
-
-
-      
-
       <div class="rest-block_row">
         <span>Доступний час між маршрутами</span>
         <b>{{ formatDuration(restData.availableRest) }}</b>
