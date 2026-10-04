@@ -7,12 +7,6 @@ export function useRouteCache(key: any) {
 
 
 
-  
-
-
-
-  
-
   function load() {
     if (import.meta.client) {
       const raw = localStorage.getItem(key);
