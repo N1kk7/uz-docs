@@ -3,6 +3,12 @@
     <RestCalculator cache-key="standalone-rest-calculator" />
   </div>
 
+
+
+
+
+
+
 </template>
 
 <script setup>
