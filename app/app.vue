@@ -4,12 +4,6 @@
     <!-- <Analytics /> -->
   </NuxtLayout>
 
-
-
-
-
-
-  
 </template>
 
 
