@@ -20,6 +20,9 @@ export function useAdvanceReportForm() {
   const removeReceivedItem = (id: string) =>
     (received.value = received.value.filter(i => i.id !== id))
 
+
+
+  
   const addExpense = () =>
     expenses.value.push({ id: uid(), date: '', description: '', amount: 0 })
   const removeExpense = (id: string) =>

@@ -19,10 +19,14 @@
         <span>Доступний час між маршрутами</span>
         <b>{{ formatDuration(restData.availableRest) }}</b>
       </div>
+
+      
       <div class="rest-block_row">
         <span>Відпочинок (не менше 3 год / половина зміни)</span>
         <b>{{ formatDuration(restData.rest) }}</b>
       </div>
+
+
       <div class="rest-block_row">
         <span>Переотдих</span>
         <b>{{ formatDuration(restData.overRest) }}</b>
