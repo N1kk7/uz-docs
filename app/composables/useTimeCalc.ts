@@ -105,6 +105,10 @@ function nightMinutesBetweenDates(startDate: any, startTime: any, endDate: any, 
   const end = toDate(endDate, endTime) as any;
   if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return null;
 
+
+
+
+  
   const base = new Date(start) as any;
   base.setHours(0, 0, 0, 0);
 

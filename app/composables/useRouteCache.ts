@@ -15,11 +15,6 @@ export function useRouteCache(key: any) {
     return null;
 
 
-
-    
-
-
-
     
   }
 
