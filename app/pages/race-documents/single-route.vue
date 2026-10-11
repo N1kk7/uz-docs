@@ -23,6 +23,11 @@
       <button class="actions_clear" @click="clearAll">Очистити</button>
     </div>
   </div>
+
+
+
+
+  
 </template>
 
 <script setup>
