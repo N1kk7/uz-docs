@@ -1,12 +1,6 @@
 <template>
   <div class="summary">
     <h3>Підсумок звіту</h3>
-
-
-
-
-
-    
     <div class="line">
       <span>Одержано</span>
       <b class="mono">{{ totalReceived.toFixed(2) }} ₴</b>
