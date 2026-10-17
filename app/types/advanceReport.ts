@@ -7,11 +7,6 @@ export interface AdvanceReportPerson {
   inn: string
 
 
-
-
-
-  
-  
 }
 
 export interface ReceivedItem {
