@@ -7,12 +7,22 @@ export interface AdvanceReportPerson {
   inn: string
 
 
+
+
+
+
+
 }
 
 export interface ReceivedItem {
   id: string
   source: string   // "від кого, № та дата" — опционально
   amount: number
+
+
+
+
+
 }
 
 
@@ -23,4 +33,8 @@ export interface ExpenseItem {
   date: string        // yyyy-mm-dd
   description: string
   amount: number
+
+
+
+  
 }
