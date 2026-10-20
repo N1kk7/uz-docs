@@ -19,14 +19,7 @@ export interface ReceivedItem {
   source: string   // "від кого, № та дата" — опционально
   amount: number
 
-
-
-
-
 }
-
-
-
 
 export interface ExpenseItem {
   id: string
