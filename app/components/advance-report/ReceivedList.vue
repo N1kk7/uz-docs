@@ -132,13 +132,6 @@ input {
   }
 }
 
-
-
-
-
-
-
-
 .total {
   display: flex;
   justify-content: space-between;
