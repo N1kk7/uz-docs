@@ -32,6 +32,10 @@ defineProps({
 })
 </script>
 
+
+
+
+
 <style lang="scss" scoped>
 .expense-row {
   display: grid;

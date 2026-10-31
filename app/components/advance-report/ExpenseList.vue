@@ -5,6 +5,12 @@
       <button type="button" class="btn-add" @click="onAdd">+ додати витрату</button>
     </div>
 
+
+
+
+
+
+    
     <span v-if="errors.expenses" class="head_error">{{ errors.expenses }}</span>
 
     <div v-if="items.length" class="table-head">
