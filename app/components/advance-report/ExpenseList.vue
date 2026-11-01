@@ -11,6 +11,11 @@
 
 
     
+
+
+
+
+    
     <span v-if="errors.expenses" class="head_error">{{ errors.expenses }}</span>
 
     <div v-if="items.length" class="table-head">
