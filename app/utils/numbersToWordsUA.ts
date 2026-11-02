@@ -14,7 +14,9 @@ function threeDigits(num: number, fem = false): string {
   } else {
     const tt = Math.floor(t / 10), o = t % 10
     if (tt) parts.push(tens[tt] || '')
-    if (o) parts.push((fem ? onesFem : ones)[o] || '') 
+    if (o) parts.push((fem ? onesFem : ones)[o] || '')
+      
+      
   }
   return parts.join(' ')
 }
@@ -24,6 +26,8 @@ function plural(num: number, forms: [string, string, string]): string {
   if (n1 > 1 && n1 < 5) return forms[1]
   if (n1 === 1) return forms[0]
   return forms[2]
+
+  
 }
 
 const scales = [
