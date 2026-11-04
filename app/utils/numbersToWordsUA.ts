@@ -27,12 +27,6 @@ function plural(num: number, forms: [string, string, string]): string {
   if (n1 === 1) return forms[0]
   return forms[2]
 
-
-
-
-
-  
-
 }
 
 const scales = [
