@@ -17,6 +17,11 @@ function threeDigits(num: number, fem = false): string {
     if (o) parts.push((fem ? onesFem : ones)[o] || '')
       
       
+
+
+
+
+      
   }
   return parts.join(' ')
 }
