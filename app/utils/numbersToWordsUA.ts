@@ -21,6 +21,10 @@ function threeDigits(num: number, fem = false): string {
 
   }
   return parts.join(' ')
+
+
+
+  
 }
 function plural(num: number, forms: [string, string, string]): string {
   const n = Math.abs(num) % 100, n1 = n % 10
