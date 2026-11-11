@@ -12,6 +12,11 @@ export interface AdvanceReportPerson {
 
 
 
+
+  
+
+
+
 }
 
 export interface ReceivedItem {
@@ -20,6 +25,11 @@ export interface ReceivedItem {
   amount: number
 
 }
+
+
+
+
+
 
 export interface ExpenseItem {
   id: string
