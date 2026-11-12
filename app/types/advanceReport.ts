@@ -8,15 +8,6 @@ export interface AdvanceReportPerson {
 
 
 
-
-
-
-
-
-  
-
-
-
 }
 
 export interface ReceivedItem {
