@@ -6,8 +6,6 @@ export interface AdvanceReportPerson {
   tabNumber: string
   inn: string
 
-
-
 }
 
 export interface ReceivedItem {
@@ -15,6 +13,11 @@ export interface ReceivedItem {
   source: string   // "від кого, № та дата" — опционально
   amount: number
 
+
+
+
+
+  
 }
 
 
