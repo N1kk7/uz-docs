@@ -6,6 +6,11 @@ export interface AdvanceReportPerson {
   tabNumber: string
   inn: string
 
+
+
+
+  
+
 }
 
 export interface ReceivedItem {
@@ -18,6 +23,11 @@ export interface ReceivedItem {
 
 
   
+
+
+
+
+
 }
 
 
