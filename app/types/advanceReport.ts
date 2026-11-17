@@ -1,3 +1,5 @@
+import type { StringLiteral } from "typescript"
+
 // types/advanceReport.ts
 export interface AdvanceReportPerson {
   lastName: string
@@ -9,10 +11,14 @@ export interface AdvanceReportPerson {
 
 export interface ReceivedItem {
   id: string
-  source: string   // "від кого, № та дата" — опционально
+  source: StringLiteral
   amount: number
 
 
+
+
+
+  
 
 
 
