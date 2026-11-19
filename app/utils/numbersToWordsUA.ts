@@ -64,6 +64,11 @@ export function integerToWordsUa(value: number): string {
 
 
 
+
+
+
+
+  
 }
 
 export function amountToWordsUa(amount: number): string {
