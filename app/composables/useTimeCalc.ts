@@ -116,19 +116,6 @@ function nightMinutesBetweenDates(startDate: any, startTime: any, endDate: any, 
 
 
 
-
-
-
-
-
-
-
-
-  
-
-
-  
-
   const base = new Date(start) as any;
   base.setHours(0, 0, 0, 0);
 

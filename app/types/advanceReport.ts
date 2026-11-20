@@ -14,12 +14,6 @@ export interface ReceivedItem {
   source: StringLiteral
   amount: number
 
-  
-
-
-
-
-
 }
 
 
