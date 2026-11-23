@@ -62,10 +62,6 @@ export function integerToWordsUa(value: number): string {
   if (n > 0) chunks.push(threeDigits(n))
   return chunks.join(' ').replace(/\s+/g, ' ').trim()
 
-
-
-
-  
 }
 
 export function amountToWordsUa(amount: number): string {

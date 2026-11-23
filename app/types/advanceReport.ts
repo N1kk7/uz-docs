@@ -17,10 +17,6 @@ export interface ReceivedItem {
   id: string
   source: StringLiteral
   amount: number
-
-
-  
-
 }
 
 
@@ -29,8 +25,4 @@ export interface ExpenseItem {
   date: string        // yyyy-mm-dd
   description: string
   amount: number
-
-
-
-  
 }
