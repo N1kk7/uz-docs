@@ -13,6 +13,11 @@ export function useRouteCache(key: any) {
       return raw ? JSON.parse(raw) : null;
     }
     return null;
+
+
+
+
+    
   }
 
   function clear() {
