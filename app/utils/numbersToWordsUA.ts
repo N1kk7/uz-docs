@@ -63,13 +63,6 @@ export function integerToWordsUa(value: number): string {
   return chunks.join(' ').replace(/\s+/g, ' ').trim()
 
 
-
-
-
-
-
-
-  
   
 }
 
