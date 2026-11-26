@@ -117,6 +117,10 @@ function nightMinutesBetweenDates(startDate: any, startTime: any, endDate: any, 
   return nightMinutesInRange(startAbs, endAbs);
 }
 
+
+
+
+
   return {
     MINUTES_IN_DAY,
     timeToMinutes,
